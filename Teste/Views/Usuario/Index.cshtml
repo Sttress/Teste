@@ -1,0 +1,29 @@
+﻿@model ICollection<Teste.Models.Usuario>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>
+    Usuarios
+</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var item in Model)
+       {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+                        <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+        </tr>   
+       }
+    </tbody>
+</table>
